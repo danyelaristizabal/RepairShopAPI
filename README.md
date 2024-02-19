@@ -1,7 +1,9 @@
 # RepairShop
-Simple Modular monolith API - proof of concept.   
+This repository houses a Simple Modular Monolith API, serving as a proof of concept.
 
-A bit inspired by https://opensource.googleblog.com/2023/03/introducing-service-weaver-framework-for-writing-distributed-applications.html .
+Drawing inspiration from Service Weaver Framework.
+
+https://opensource.googleblog.com/2023/03/introducing-service-weaver-framework-for-writing-distributed-applications.html .
 
 ## Requirements 
 Docker
@@ -16,19 +18,16 @@ Docker compose up
 
 Swagger is exposed at https://localhost:5134/swagger/index.html
 
-## Short description: 
+## Overview: 
+The service comprises three distinct modules: Users, Tickets, and Notifications.
 
-The service exposes 3 different modules: Users, Tickets, Notifications. 
+Each module provides basic CRUD operations via REST and can operate autonomously or as part of the monolithic application, depending on configurations defined in the appconfig.
 
-Each module implements basic CRUD operations via REST and can be Run as a standalone module as well as a monolith together with the wholeapplication depending on the settings at appconfig. 
+Users module implements the UsersAPI.
+Tickets module implements the TicketsAPI.
+Notifications module implements the RulesAPI.
+The Notifications module serves dual purposes:
 
-Users implements the UsersAPI
-Tickets implements the TicketsAPI 
-Notifications implements the RulesAPI
-
-Notifications module has 2 responsabilities: 
-1. It exposes the RulesAPI that are responsible for limiting the amount of notifications that are being delivered to our users. 
-2. It process every notification that is being triggered on the other modules. 
-
-
+Exposure of RulesAPI: Responsible for controlling the volume of notifications delivered to users.
+Processing Notifications: Handles the processing of notifications triggered by other modules.
 
