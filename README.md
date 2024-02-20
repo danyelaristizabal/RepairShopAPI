@@ -27,7 +27,7 @@ Users module implements the UsersAPI.
 Tickets module implements the TicketsAPI.
 Notifications module implements the RulesAPI.
 
-# The Notifications module serves dual purposes:
+## The Notifications module serves dual purposes:
 Exposure of RulesAPI: Responsible for CRUD operations for the rules that dictate how rates will be limited.
 Processing Notifications: Handles the processing of notifications triggered by other modules.
 
