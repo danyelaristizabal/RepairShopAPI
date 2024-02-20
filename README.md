@@ -26,8 +26,8 @@ Each module provides basic CRUD operations via REST and can operate autonomously
 Users module implements the UsersAPI.
 Tickets module implements the TicketsAPI.
 Notifications module implements the RulesAPI.
-The Notifications module serves dual purposes:
 
-Exposure of RulesAPI: Responsible for controlling the volume of notifications delivered to users.
+#The Notifications module serves dual purposes:
+Exposure of RulesAPI: Responsible for CRUD operations for the rules that dictate how rates will be limited.
 Processing Notifications: Handles the processing of notifications triggered by other modules.
 
